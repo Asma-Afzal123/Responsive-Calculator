@@ -1,0 +1,130 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #df9797;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Calculator {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    max-width: 400px; /* Limit max width */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+input, select {
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Limit maximum width */
+    text-align: center;
+    display: block; 
+    margin: 10px 0; /* Add vertical spacing */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input:focus {
+    color: #007BFF;
+    border: 1px solid #007BFF;
+    outline: none; /* Remove default focus outline */
+}
+
+select option {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 80%; /* Responsive width */
+     max-width: 160px;  /* Limit maximum width */
+    height: 40px;
+    margin:  auto;
+    border-radius: 25px;
+    background-color: #007BFF !important;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease; /* Smooth hover transition */
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #4592e4 ;
+}
+
+.content{
+    color: #f4f7f7;
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing for responsiveness */
+    font-family: "Roboto", sans-serif;
+}
+
+.content p {
+    color: #fff;
+    font-size: 17px;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the screen */
+    z-index: -1; /* Sends the video behind the content */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #f3f5f6;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    input, select {
+        width: 90%; /* Full width for smaller screens */
+    }
+    button {
+        width: 90%; /* Full width for smaller screens */  
+        
+    }
+    .content p {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}
